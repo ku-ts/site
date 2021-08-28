@@ -13,19 +13,24 @@ const App: FunctionalComponent = () => {
 				<Route path="/" component={Home} />
 				<NotFoundPage default />
 			</Router>
-			<span class="credits">
-				Website made by{' '}
-				<a
-					href={
-						'https://nora.lgbt/?ref=' + typeof document !== 'undefined'
-							? document.location.href
-							: ''
-					}
-					class="link"
-				>
-					Nora
-				</a>
-			</span>
+			{typeof document !== 'undefined' ? (
+				<span class="credits">
+					Website made by{' '}
+					<a
+						href={'https://nora.lgbt/?ref=' + document.location.href}
+						class="link"
+					>
+						Nora
+					</a>
+				</span>
+			) : (
+				<span class="credits">
+					Website made by{' '}
+					<a href={'https://nora.lgbt/'} class="link">
+						Nora
+					</a>
+				</span>
+			)}
 		</div>
 	);
 };
