@@ -10,6 +10,8 @@ class e404 extends Component<
 	}
 > {
 	render() {
+		if (typeof document !== 'undefined')
+			document.title = '404 - Not Found - 3qmk.xyz';
 		return (
 			<div class={style.notfound}>
 				<span class={style.userhost}>yvonne@ngc</span>

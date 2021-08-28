@@ -16,7 +16,7 @@ const App: FunctionalComponent = () => {
 			<span class="credits">
 				Website made by{' '}
 				<a
-					href={'https://nora.lgbt/?ref=' + document.location.href}
+					href={'https://nora.lgbt/?ref=' + document?.location.href}
 					class="link"
 				>
 					Nora

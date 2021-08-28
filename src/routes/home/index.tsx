@@ -12,10 +12,24 @@ class Home extends Component<
 	render() {
 		return (
 			<div class={style.home}>
-				<span class={style.userhost}>yvonne@ngc</span>
-				<span class={style.colon}>:</span>
-				<span class={style.path}>~/3qmk.xyz</span>
-				$ node out/index.js
+				<br />
+				<span class="line">
+					<span class={style.userhost}>yvonne@ngc</span>
+					<span class={style.colon}>:</span>
+					<span class={style.path}>~/3qmk.xyz</span>$ git pull &gt; /dev/null
+				</span>
+				<br />
+				<span class="line">
+					<span class={style.userhost}>yvonne@ngc</span>
+					<span class={style.colon}>:</span>
+					<span class={style.path}>~/3qmk.xyz</span>$ tsc
+				</span>
+				<br />
+				<span class="line">
+					<span class={style.userhost}>yvonne@ngc</span>
+					<span class={style.colon}>:</span>
+					<span class={style.path}>~/3qmk.xyz</span>$ node out/index.js
+				</span>
 				<Terminal
 					text={[
 						{
@@ -45,6 +59,14 @@ class Home extends Component<
 							type: 'link',
 							text: 'here',
 							url: 'https://twitter.com/playosugame',
+						},
+						{ type: 'text', text: '.' },
+						{ type: 'newline' },
+						{ type: 'text', text: 'The source for this website can be found ' },
+						{
+							type: 'link',
+							text: 'here',
+							url: 'https://github.com/ku-ts/site',
 						},
 						{ type: 'text', text: '.' },
 					]}
