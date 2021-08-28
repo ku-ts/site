@@ -1,0 +1,3 @@
+[submodule "src/components/Components"]
+	path = src/components/Components
+	url = git@github.com:Phonin/Components.git

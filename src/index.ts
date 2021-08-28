@@ -1,4 +1,4 @@
-// Example
+// Yvonne
 // Generated using https://github.com/0J3/preact-typescript
 
 import './style/index.scss';

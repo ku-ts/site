@@ -1,13 +1,76 @@
-import { FunctionalComponent, h } from 'preact';
+import { Component, h } from 'preact';
+import Terminal from '../../components/terminal';
+import Typewriter from '../../components/terminal/typewriter';
 import style from './style.scss';
 
-const Home: FunctionalComponent = () => {
-	return (
-		<div class={style.home}>
-			<h1>Home</h1>
-			<p>This is the Home component.</p>
-		</div>
-	);
-};
+class Home extends Component<
+	{},
+	{
+		showAfter: boolean;
+	}
+> {
+	render() {
+		return (
+			<div class={style.home}>
+				<span class={style.userhost}>yvonne@ngc</span>
+				<span class={style.colon}>:</span>
+				<span class={style.path}>~/3qmk.xyz</span>
+				$ node out/index.js
+				<Terminal
+					text={[
+						{
+							type: 'text',
+							text: "Hi, I'm Yvonne, a Lua, JavaScript and TypeScript Developer!",
+						},
+						{
+							type: 'newline',
+						},
+						{
+							type: 'newline',
+						},
+						{ type: 'text', text: 'My github can be found ' },
+						{
+							type: 'link',
+							text: 'here',
+							url: 'https://github.com/discorc',
+						},
+						{ type: 'text', text: ', my twitch can be found ' },
+						{
+							type: 'link',
+							text: 'here',
+							url: 'https://www.twitch.tv/buckettcat',
+						},
+						{ type: 'text', text: ', and my twitter ' },
+						{
+							type: 'link',
+							text: 'here',
+							url: 'https://twitter.com/playosugame',
+						},
+						{ type: 'text', text: '.' },
+					]}
+					defaultInterval={35}
+					done={() => {
+						if (this.state.showAfter !== false)
+							setTimeout(() => {
+								this.setState({
+									showAfter: true,
+								});
+							}, 500);
+					}}
+				/>
+				{this.state.showAfter ? (
+					<>
+						<span class={style.userhost}>yvonne@ngc</span>
+						<span class={style.colon}>:</span>
+						<span class={style.path}>~/3qmk.xyz</span>$
+						<Typewriter text=" " interval={50} cursorFlashes={Infinity} />
+					</>
+				) : (
+					<></>
+				)}
+			</div>
+		);
+	}
+}
 
 export default Home;
