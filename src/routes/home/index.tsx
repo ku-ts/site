@@ -10,6 +10,7 @@ class Home extends Component<
 	}
 > {
 	render() {
+		if (typeof document !== 'undefined') document.title = 'Home - 3qmk.xyz';
 		return (
 			<div class={style.home}>
 				<br />
