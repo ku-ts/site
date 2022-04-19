@@ -14,7 +14,7 @@ class e404 extends Component<
 			document.title = '404 - Not Found - 3qmk.xyz';
 		return (
 			<div class={style.notfound}>
-				<span class={style.userhost}>yvonne@ngc</span>
+				<span class={style.userhost}>aga@ngc</span>
 				<span class={style.colon}>:</span>
 				<span class={style.path}>~/3qmk.xyz</span>$ node out/location
 				{document?.location.pathname ?? 'unknown'}.js
@@ -40,7 +40,7 @@ class e404 extends Component<
 						},
 						{
 							type: 'text',
-							text: `Error: Cannot find module '/home/yvonne/3qmk.xyz/out/location${
+							text: `Error: Cannot find module '/home/aga/3qmk.xyz/out/location${
 								document?.location.pathname ?? 'unknown'
 							}.js'`,
 						},
@@ -143,7 +143,7 @@ class e404 extends Component<
 				/>
 				{this.state.showAfter ? (
 					<>
-						<span class={style.userhost}>yvonne@ngc</span>
+						<span class={style.userhost}>aga@ngc</span>
 						<span class={style.colon}>:</span>
 						<span class={style.path}>~/3qmk.xyz</span>$
 						<Typewriter text=" " interval={50} cursorFlashes={Infinity} />
